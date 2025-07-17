@@ -1,0 +1,665 @@
+/*------------------- NAVBAR ----------------------*/
+
+.notification{
+  background-color: #000;
+}
+
+.notify{
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.notify-msg{
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.dismiss{
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 0;
+  top: 1.2rem;
+}
+
+.header {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 4.8rem;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+.logo-text {
+  font-family: "Integral_CF_Bold";
+  font-size: 3.2rem;
+}
+
+.nav-list-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 32.1rem;
+}
+
+.nav-list-item {
+  font-family: "Satoshi_Regular", sans-serif;
+  font-size: 1.6rem;
+}
+
+.search-bar {
+  flex-grow: 1;
+  height: 4.8rem;
+  background-color: #f0f0f0;
+  border-radius: 62px;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.4rem;
+}
+
+.search-text {
+  opacity: 40%;
+  font-size: 1.6rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.nav-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nav-search-icon{
+  display: none;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/*------------------- HERO SECTION ----------------------*/
+
+.section-hero {
+  background-color: #f2f0f1;
+}
+
+.hero {
+  column-gap: 0;
+  overflow: hidden;
+}
+
+.hero-left {
+  height: 66.3rem;
+  padding-top: 10.3rem;
+  width: 100%;
+  justify-self: start;
+}
+
+.heading-primary {
+  font-family: "Integral_CF_Bold";
+  font-size: 6.4rem;
+  margin-bottom: 3.2rem;
+  letter-spacing: -0.2rem;
+  text-shadow: 0 0.4rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+  font-size: 16px;
+  opacity: 60%;
+  margin-bottom: 3.2rem;
+  width: 90%;
+}
+
+.btn-shop {
+  width: 21rem;
+  height: 5.2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 62px;
+  margin-bottom: 4.8rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  font-family: 'Satoshi_Medium';
+}
+
+.btn-shop:hover {
+  background-color: #272424;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3.2rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.207);
+  padding-right: 3.2rem;
+}
+
+.hero-stat:nth-child(3) {
+  border: none;
+}
+
+.hero-stat span {
+  font-family: "Satoshi_Bold";
+  font-size: 4rem;
+}
+
+.hero-stat p {
+  font-size: 1.6rem;
+  opacity: 60%;
+}
+
+.hero-right{
+  position: relative;
+}
+
+.star--big{
+  width: 10.4rem;
+  height: 10.4rem;
+  position: absolute;
+  top: 7.7rem;
+  right: 0;
+}
+
+.star--small{
+  width: 5.6rem;
+  height: 5.6rem;
+  position: absolute;
+  top: 28.8rem;
+  left: 0;
+  z-index: 1500;
+}
+
+.hero-right img {
+  width: auto;
+}
+
+/*------------------- BRANDS SECTION ----------------------*/
+
+.section-brands {
+  background-color: #000;
+}
+
+.brand-list {
+  padding: 4.4rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-logo{
+  margin: 0.5rem 5rem;
+  max-width: 20rem;
+}
+
+.brand-logo:nth-child(1){
+  margin-left: 4rem;
+}
+.brand-logo:nth-child(5){
+  margin-right: 4rem;
+}
+
+.brand-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-between;
+  justify-items: center;
+  gap: 20px;
+}
+
+.brand-grid img{
+  width: 15rem;
+  height: auto
+}
+
+/*------------------- ARRIVALS SECTION ----------------------*/
+
+.section-arrival {
+  padding: 7.2rem 0 6.4rem;
+}
+
+.show-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-secondary {
+  font-family: "Integral_CF_Bold", sans-serif;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  margin-bottom: 5.5rem;
+}
+
+.show-items {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3.6rem;
+}
+
+.show-card-img {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+
+.show-name {
+  font-family: "Satoshi_Bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.show-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.show-rating span {
+  font-size: 1.4rem;
+  align-self: flex-end;
+  margin-left: 1.3rem;
+}
+
+.price {
+  display: flex;
+}
+
+.price span,
+.price del {
+  font-family: "Satoshi_Bold", sans-serif;
+  font-size: 2.4rem;
+}
+
+.price del {
+  opacity: 40%;
+  margin-left: 1rem;
+}
+
+.discount {
+  background-color: rgb(255, 51, 51, 0.1);
+  padding: 0.6rem 1.35rem;
+  border-radius: 62px;
+  width: 5.8rem;
+  height: 2.8rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount span {
+  font-family: "Satishi_Medium", sans-serif;
+  font-size: 1.2rem;
+  color: #ff3333;
+}
+
+.btn-show {
+  width: max-content;
+  height: 5.2rem;
+  color: #000;
+  background-color: #fff;
+  border-radius: 62px;
+  cursor: pointer;
+  border: 1px solid #00000034;
+  transition: all 0.3s;
+  padding: 1.5rem 8rem;
+  font-family: 'Satoshi_Medium';
+  font-size: 1.6rem;
+}
+
+.btn-show:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/*----------- LINE -----------*/
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 6.2rem;
+}
+
+/*------------------- SELLING SECTION ----------------------*/
+
+.section-selling {
+  padding-bottom: 6.4rem;
+  margin-bottom: 1.6rem;
+}
+
+/*------------------- BROWSE SECTION ----------------------*/
+
+.browse {
+  padding: 7rem 6.4rem;
+  background-color: #f0f0f0;
+  border-radius: 40px;
+}
+
+.browse-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.browse h2 {
+  margin-bottom: 0;
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+
+.browse-card {
+  height: 28.9rem;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.browse-title {
+  font-family: "Satoshi_Bold", sans-serif;
+  font-size: 3.6rem;
+  padding-top: 2.5rem;
+  padding-left: 3.6rem;
+}
+
+.browse-casual {
+  background-image: url(../assets/images/style/image\ 11.jpg);
+  background-size: cover;
+}
+
+.browse-formal {
+  grid-column: 2 / -1;
+  background-image: url(../assets/images/style/image\ 13.jpg);
+  background-size: cover;
+}
+
+.browse-party {
+  grid-column: 1 / span 2;
+  background-image: url(../assets/images/style/image\ 12.jpg);
+  background-size: cover;
+}
+
+.browse-gym {
+  grid-column: 3 / -1;
+  background-image: url(../assets/images/style/image\ 14.jpg);
+  background-size: cover;
+}
+
+/*------------------- TESTIMONIALS SECTION ----------------------*/
+
+.section-testimonials {
+  padding-top: 8rem;
+}
+
+.test-upper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.test-upper .heading-secondary{
+  margin-bottom: 0;
+}
+
+.test-slide{
+  display: flex;
+  gap: 1.6rem;
+}
+
+.arrow{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 3.2rem;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  min-width: 36.6rem;
+  margin-right: 4rem;
+}
+
+.test-rating {
+  display: flex;
+  gap: 0.64rem;
+  margin-bottom: 1.5rem;
+}
+
+.test-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.test-name {
+  font-family: "Satoshi_Bold", sans-serif;
+  font-size: 2rem;
+}
+
+.test-content {
+  font-size: 1.6rem;
+  opacity: 60%;
+  line-height: 1.4;
+}
+
+/*------------------- CTA SECTION ----------------------*/
+
+.section-cta {
+  position: relative;
+}
+
+.section-cta::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #f0f0f0; /* Your desired background color */
+}
+
+.cta-container{
+  position: relative;
+}
+
+.cta {
+  background-color: #000;
+  border-radius: 20px;
+  padding: 0 6.4rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: auto;
+}
+
+.cta p {
+  font-family: "Integral_CF_Bold", sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  padding: 4.3rem 0 4.3rem 6.4rem;
+}
+
+.cta-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-btns img {
+  margin-right: 1.2rem;
+}
+
+.cta-btns form {
+  border-radius: 62px;
+  background-color: #fff;
+  color: rgb(0, 0, 0, 0.5);
+  font-family: "Satoshi_Medium";
+  font-size: 1.6rem;
+  padding: 1.2rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 60%;
+  margin-bottom: 1.4rem;
+}
+
+.cta-btns input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: rgb(0, 0, 0, 0.4);
+  font-family: "Satoshi_Medium";
+  font-size: 1.6rem;
+}
+
+.button-cta {
+  width: 60%;
+  border-radius: 62px;
+  background-color: #fff;
+  color: #000;
+  font-family: "Satoshi_Medium";
+  font-size: 1.6rem;
+  padding: 1.2rem 3.8rem;
+}
+
+/*------------------- FOOTER SECTION ----------------------*/
+
+.footer {
+  background-color: #f0f0f0;
+  padding-bottom: 8rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  padding-bottom: 5rem;  
+  padding-top: 5rem;
+}
+
+.footer-container a{
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-intro span{
+  font-family: 'Integral_CF_Bold';
+  font-size: 3.345rem;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.footer-desc{
+  font-size: 1.4rem;
+  opacity: 60%;
+  margin-bottom: 3.5rem;
+}
+
+.social{
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icon{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb{
+  background-color: black;
+}
+
+.footer-col-head{
+  font-family: 'Satoshi_Medium',sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 2.6rem;
+}
+
+.footer-nav{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 13.3rem;
+}
+
+.footer-nav-items{
+  opacity: 60%;
+  font-size: 1.6rem;
+}
+
+.footer-line{
+  margin-bottom: 0;
+}
+
+.footer-end{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.footer-end p{
+  font-size: 1.4rem;
+  opacity: 60%;
+}
+
+.payment{
+  display: flex;
+  gap: 0.2rem;
+}
+
+.pay-card{
+  width: 5.6rem;
+  height: auto;
+}

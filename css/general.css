@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Integral_CF_Regular";
+  src: url("../assets/fonts/integral-cf/FONTSPRINGDEMO-IntegralCFRegular.woff2")
+      format("woff2"),
+    url("../assets/fonts/integral-cf/FONTSPRINGDEMO-IntegralCFRegular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Integral_CF_Bold";
+  src: url("../assets/fonts/integral-cf/FONTSPRINGDEMO-IntegralCFBoldRegular.woff2")
+      format("woff2"),
+    url("../assets/fonts/integral-cf/FONTSPRINGDEMO-IntegralCFBoldRegular.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi_Regular";
+  src: url("../assets/fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi_Bold";
+  src: url("../assets/fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi_Medium";
+  src: url("../assets/fonts/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("../assets/fonts/satoshi/Satoshi-Medium.woff") format("woff");
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Satoshi_Regular", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}

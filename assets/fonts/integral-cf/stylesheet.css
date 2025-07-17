@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFBoldRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFBoldRegular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFBoldItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF Extra';
+    src: url('FONTSPRINGDEMO-IntegralCFExtraBoldItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFHeavyItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFHeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF Demi';
+    src: url('FONTSPRINGDEMO-IntegralCFDemiBoldRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFDemiBoldRegular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF Demi';
+    src: url('FONTSPRINGDEMO-IntegralCFDemiBoldItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFDemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFHeavyRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFHeavyRegular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFMediumRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFMediumRegular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF Extra';
+    src: url('FONTSPRINGDEMO-IntegralCFExtraBoldRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFExtraBoldRegular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFMediumItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFMediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFRegular.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    src: url('FONTSPRINGDEMO-IntegralCFItalic.woff2') format('woff2'),
+        url('FONTSPRINGDEMO-IntegralCFItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
