@@ -55,6 +55,11 @@
   width: 32.1rem;
 }
 
+.nav-list-items a{
+  text-decoration: none;
+  color: #000;
+}
+
 .nav-list-item {
   font-family: "Satoshi_Regular", sans-serif;
   font-size: 1.6rem;
