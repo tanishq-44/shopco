@@ -97,6 +97,10 @@
   height: 2.4rem;
 }
 
+.nav-list-close{
+  display: none;;
+}
+
 /*------------------- HERO SECTION ----------------------*/
 
 .section-hero {
