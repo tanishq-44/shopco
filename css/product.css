@@ -1,0 +1,95 @@
+.prod-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 80px;
+    margin-top: 36px;
+    column-gap: 40px;
+}
+.prod-images{
+    display: grid;
+    grid-template-columns: 1fr 444px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 14px;
+}
+.prod-images img{
+    width: 100%;
+    max-height: 167px;
+}
+.prod-img-main{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    min-height: 530px;
+}
+.prod-name{
+    font-family: 'Integral_CF_Bold',sans-serif;
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+.prod-rating{
+    margin-bottom: 14px;
+}
+.prod-price>span, .prod-price del{
+    font-size: 32px !important; 
+}
+.prod-price>.discount>span{
+    font-size: 14px;
+}
+.prod-info{
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(0,0,0,0.6);
+    margin: 20px 0 24px 0;
+}
+.prod-line{
+    margin-bottom: 24px;
+}
+.pcolor{
+    font-size: 16px;
+    color: rgb(0,0,0,0.6);
+}
+.prod-colors{
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.prod-colors .color:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prod-sizes{
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.cart-area{
+    display: flex;
+    gap: 20px;
+}
+.quant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 172px;
+    height: auto;
+    background-color: #f0f0f0;
+    padding: 16px 20px;
+    border-radius: 62px;
+}
+.quant>span{
+    font-size: 16px;
+    color: #000;
+}
+.quant-icon{
+    width: 24px;
+    height: 24px;
+}
+.cart{
+    background-color: #000;
+    color: #fff;
+    padding: 16px 54px;
+    border-radius: 62px;
+    width: 400px;
+    height: auto;
+}
+
