@@ -1,6 +1,7 @@
 .shop-content {
   display: flex;
   gap: 40px;
+  margin-bottom: 80px;
 }
 .breadcrumb {
   font-size: 14px;
@@ -11,11 +12,12 @@
   gap: 4px;
 }
 .filters {
-  width: 260px;
+  min-width: 295px;
+  height: 1220px;
   background: #fff;
   border-radius: 20px;
   border: 1px solid rgb(0, 0, 0, 0.1);
-  padding: 28px 24px;
+  padding: 20px 24px;
   font-size: 16px;
   height: fit-content;
 }
@@ -32,6 +34,9 @@
 .filter-icon {
   width: 20px;
   height: auto;
+}
+.down-icon{
+  transform: rotate(90deg);
 }
 .filter-line {
   margin-bottom: 24px;
@@ -74,8 +79,8 @@
   flex-wrap: wrap;
 }
 .color {
-  width: 30px;
-  height: 30px;
+  width: 37px;
+  height: 37px;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -87,6 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
 }
 .size {
   background: #f0f0f0;
@@ -96,6 +102,7 @@
   font-size: 13px;
   cursor: pointer;
   border: 1px solid #eee;
+  width: fit-content;
 }
 .size.selected {
   background: #000;
@@ -123,72 +130,83 @@
   gap: 32px;
   align-items: center;
 }
-.products-meta .arrow {
-  font-size: 12px;
-  margin-left: 4px;
+.products-meta .sort-icon{
+  width: 11.5px;
+  height: 6.5px;
+  margin-bottom: 2px;
 }
 
-.products-grid {
+.shop-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  margin-bottom: 32px;
 }
-.product-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-  padding: 18px 18px 16px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: box-shadow 0.2s;
+.shop-card-img {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
 }
-.product-card:hover {
-  box-shadow: 0 4px 24px rgba(48, 79, 254, 0.08);
+
+.shop-name {
+  font-family: "Satoshi_Bold", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
-.product-card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-}
-.product-title {
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.product-rating {
-  font-size: 15px;
-  color: #ffc107;
-  margin-bottom: 8px;
+
+.shop-rating {
   display: flex;
   align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.shop-rating span {
+  font-size: 1.4rem;
+  align-self: flex-end;
+  margin-left: 1.3rem;
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pages{
+  display: flex;
+  gap: 2px;
+}
+.page{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 12px;
+  color: rgb(0, 0, 0, 0.5);
+}
+.page.active{
+  color: #000;
+  background-color: rgb(0, 0, 0, 0.1);
+}
+.page-btn{
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
+  font-size: 14px;
 }
-.product-rating .stars {
-  font-size: 16px;
-  letter-spacing: 1px;
+.page-btn:hover {
+  background-color: rgb(0, 0, 0, 0.05);
+  cursor: pointer;
 }
-.product-rating .rating {
-  color: #888;
-  font-size: 13px;
-}
-.product-price {
-  font-weight: 700;
-  font-size: 18px;
-  color: #222;
-}
-.old-price {
-  text-decoration: line-through;
-  color: #888;
-  font-weight: 400;
-  font-size: 15px;
-  margin-left: 8px;
-}
-.discount {
-  color: #ff1744;
-  font-size: 13px;
-  font-weight: 500;
-  margin-left: 8px;
+.page-btn img{
+  width: 20px;
+  height: 20px;
 }
