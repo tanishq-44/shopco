@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap"
@@ -40,6 +41,9 @@
               <div class="logo-text">SHOP.CO</div>
             </div>
             <div class="nav-list">
+              <button class="nav-list-close" aria-label="Close menu">
+                &times;
+              </button>
               <ul class="nav-list-items">
                 <li class="nav-list-item"><a href="shop.html">Shop</a></li>
                 <li class="nav-list-item"><a href="">On Sale</a></li>
@@ -226,7 +230,11 @@
                     class="sort-icon"
                   />
                 </span>
+                <!-- Filter icon for mobile -->
               </div>
+              <button class="mobile-filter-btn" aria-label="Show filters">
+                <img src="./assets/icons/filters.svg" alt="filter icon" />
+              </button>
             </div>
             <div class="shop-items">
               <div class="shop-card">
@@ -571,5 +579,75 @@
         </div>
       </div>
     </footer>
+    <div class="filter-overlay">
+      <div class="filter-overlay-content">
+        <div class="filter-overlay-header">
+          <h3>Filters</h3>
+          <button class="filter-overlay-close" aria-label="Close filters">
+            &times;
+          </button>
+        </div>
+        <!-- Paste your filters markup here (same as inside <aside class="filters">) -->
+        <div class="filter-group">
+          <div class="filter-title"><a href="product.html">T-Shirts</a></div>
+          <div class="filter-title">Shorts</div>
+          <div class="filter-title">Shirts</div>
+          <div class="filter-title">Hoodie</div>
+          <div class="filter-title">Jeans</div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-heading">Price</div>
+          <div class="slider">
+            <input type="range" min="0" max="250" value="50" />
+            <div class="price-labels">
+              <span>$50</span>
+              <span>$200</span>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-heading">Colors</div>
+          <div class="colors">
+            <span class="color" style="background: #00c853"></span>
+            <span class="color" style="background: #ffd600"></span>
+            <span class="color" style="background: #ff1744"></span>
+            <span class="color" style="background: #2979ff"></span>
+            <span class="color selected" style="background: #304ffe"></span>
+            <span class="color" style="background: #f500a3"></span>
+            <span class="color" style="background: #000"></span>
+            <span
+              class="color"
+              style="background: #fff; border: 1px solid #ccc"
+            ></span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-heading">Size</div>
+          <div class="sizes">
+            <span class="size">XX-Small</span>
+            <span class="size">X-Small</span>
+            <span class="size">Small</span>
+            <span class="size">Medium</span>
+            <span class="size selected">Large</span>
+            <span class="size">X-Large</span>
+            <span class="size">XX-Large</span>
+            <span class="size">3X-Large</span>
+            <span class="size">4X-Large</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Dress Style</div>
+          <div>
+            <div class="filter-title">Casual</div>
+            <div class="filter-title">Formal</div>
+            <div class="filter-title">Party</div>
+            <div class="filter-title">Gym</div>
+          </div>
+        </div>
+        <button class="apply-filter-btn">Apply Filter</button>
+      </div>
+    </div>
+    <script src="js/hamburger.js"></script>
+    <script src="js/shop-filters.js"></script>
   </body>
 </html>

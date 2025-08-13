@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/shop.css" />
     <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter:400,500,700&display=swap"
@@ -42,6 +43,9 @@
               <div class="logo-text">SHOP.CO</div>
             </div>
             <div class="nav-list">
+              <button class="nav-list-close" aria-label="Close menu">
+                &times;
+              </button>
               <ul class="nav-list-items">
                 <li class="nav-list-item"><a href="shop.html">Shop</a></li>
                 <li class="nav-list-item"><a href="">On Sale</a></li>
@@ -91,64 +95,81 @@
         </div>
       </div>
       <section class="product-section">
-        <div class="prod-content container">
-          <div class="prod-images">
-            <img src="./assets/images/prod/image 2.png" alt="product image 1" />
-            <img
-              src="./assets/images/prod/main.png"
-              alt="product image 1"
-              class="prod-img-main"
-            />
-            <img src="./assets/images/prod/image 5.png" alt="product image 1" />
-            <img src="./assets/images/prod/image 6.png" alt="product image 1" />
-          </div>
-          <div class="prod-description">
-            <p class="prod-name">One Life Graphic T-shirt</p>
-            <div class="shop-rating prod-rating">
-              <img src="./assets/icons/full-star.svg" alt="1 star" />
-              <img src="./assets/icons/full-star.svg" alt="1 star" />
-              <img src="./assets/icons/full-star.svg" alt="1 star" />
-              <img src="./assets/icons/full-star.svg" alt="1 star" />
-              <img src="./assets/icons/full-star.svg" alt="1 star" />
-              <span>5/5</span>
+        <div class="container">
+          <div class="prod-content">
+            <div class="prod-images">
+              <img
+                src="./assets/images/prod/main.png"
+                alt="product image 1"
+                class="prod-img-main"
+              />
+              <img
+                src="./assets/images/prod/image 2.png"
+                alt="product image 1"
+              />
+              <img
+                src="./assets/images/prod/image 5.png"
+                alt="product image 1"
+              />
+              <img
+                src="./assets/images/prod/image 6.png"
+                alt="product image 1"
+              />
             </div>
-            <div class="price prod-price">
-              <span>$120</span>
-              <del>$150</del>
-              <div class="discount"><span>-30%</span></div>
-            </div>
-            <div class="prod-info">
-              This graphic t-shirt which is perfect for any occasion. Crafted
-              from a soft and breathable fabric, it offers superior comfort and
-              style.
-            </div>
-            <div class="line prod-line"></div>
-            <span class="pcolor">Select Colors</span>
-            <div class="prod-colors">
-              <span class="color" style="background: #4f4631">
-                <img src="./assets/icons/selected.svg" alt="selected icon">
-              </span>
-              <span class="color" style="background: #314f4a"></span>
-              <span class="color" style="background: #31344f"></span>
-            </div>
-            <div class="line prod-line"></div>
-            <span class="pcolor">Select Size</span>
-            <div class="sizes prod-sizes">
+            <div class="prod-description">
+              <p class="prod-name">One Life Graphic T-shirt</p>
+              <div class="shop-rating prod-rating">
+                <img src="./assets/icons/full-star.svg" alt="1 star" />
+                <img src="./assets/icons/full-star.svg" alt="1 star" />
+                <img src="./assets/icons/full-star.svg" alt="1 star" />
+                <img src="./assets/icons/full-star.svg" alt="1 star" />
+                <img src="./assets/icons/full-star.svg" alt="1 star" />
+                <span>5/5</span>
+              </div>
+              <div class="price prod-price">
+                <span>$120</span>
+                <del>$150</del>
+                <div class="discount"><span>-30%</span></div>
+              </div>
+              <div class="prod-info">
+                This graphic t-shirt which is perfect for any occasion. Crafted
+                from a soft and breathable fabric, it offers superior comfort
+                and style.
+              </div>
+              <div class="line prod-line"></div>
+              <span class="pcolor">Select Colors</span>
+              <div class="prod-colors">
+                <span class="color" style="background: #4f4631">
+                  <img src="./assets/icons/selected.svg" alt="selected icon" />
+                </span>
+                <span class="color" style="background: #314f4a"></span>
+                <span class="color" style="background: #31344f"></span>
+              </div>
+              <div class="line prod-line"></div>
+              <span class="pcolor">Select Size</span>
+              <div class="sizes prod-sizes">
                 <span class="size">Small</span>
                 <span class="size">Medium</span>
                 <span class="size selected">Large</span>
                 <span class="size">X-Large</span>
-            </div>
-            <div class="line prod-line"></div>
-            <div class="cart-area">
+              </div>
+              <div class="line prod-line"></div>
+              <div class="cart-area">
                 <div class="quant">
-                    <img src="./assets/icons/minus.svg" alt="minus icon" class="quant-icon">
-                    <span>1</span>
-                    <img src="./assets/icons/plus.svg" alt="plus icon" class="quant-icon">
+                  <img
+                    src="./assets/icons/minus.svg"
+                    alt="minus icon"
+                    class="quant-icon"
+                  />
+                  <span>1</span>
+                  <img
+                    src="./assets/icons/plus.svg"
+                    alt="plus icon"
+                    class="quant-icon"
+                  />
                 </div>
-                <button class="cart">
-                    Add to Cart
-                </button>
+                <button class="cart">Add to Cart</button>
+              </div>
             </div>
           </div>
         </div>
@@ -288,5 +309,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>
