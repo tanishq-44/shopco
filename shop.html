@@ -132,8 +132,21 @@
                   class="down-icon"
                 />
               </div>
-              <div class="slider">
-                <input type="range" min="50" max="200" value="50" />
+              <div class="slider price-slider">
+                <input
+                  type="range"
+                  min="50"
+                  max="200"
+                  value="50"
+                  id="price-min"
+                />
+                <input
+                  type="range"
+                  min="50"
+                  max="200"
+                  value="200"
+                  id="price-max"
+                />
                 <div class="price-labels">
                   <span>$50</span>
                   <span>$200</span>
@@ -236,7 +249,7 @@
                 <img src="./assets/icons/filters.svg" alt="filter icon" />
               </button>
             </div>
-            <div class="shop-items">
+            <div id="productList" class="shop-items">
               <div class="shop-card">
                 <div class="shop-card-img">
                   <img
@@ -649,5 +662,6 @@
     </div>
     <script src="js/hamburger.js"></script>
     <script src="js/shop-filters.js"></script>
+    <script src="js/shop.js"></script>
   </body>
 </html>

@@ -53,12 +53,24 @@
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+  
+  position: relative;
 }
-.prod-colors .color:nth-child(1) {
+.color-tick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.prod-colors .color {
+  position: relative;
+}
+
 .prod-sizes {
   margin-top: 16px;
   margin-bottom: 24px;

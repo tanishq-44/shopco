@@ -139,9 +139,7 @@
               <div class="line prod-line"></div>
               <span class="pcolor">Select Colors</span>
               <div class="prod-colors">
-                <span class="color" style="background: #4f4631">
-                  <img src="./assets/icons/selected.svg" alt="selected icon" />
-                </span>
+                <span class="color" style="background: #4f4631"> </span>
                 <span class="color" style="background: #314f4a"></span>
                 <span class="color" style="background: #31344f"></span>
               </div>
@@ -310,5 +308,38 @@
       </div>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/selection.js"></script>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
+      let products = JSON.parse(localStorage.getItem("products")) || [];
+
+      if (productId) {
+        const singleProduct = products.find((p) => p.id == productId);
+        console.log("changed");
+
+        if (!singleProduct) return;
+
+        document.querySelector(".prod-name").textContent = singleProduct.name;
+
+        // Update price (only showing main price — you can extend for discounts)
+        const priceElem = document.querySelector(".prod-price span");
+        console.log(priceElem);
+        priceElem.innerHTML = `$${singleProduct.price}`;
+        console.log(priceElem.textContent);
+
+        // Update description
+        document.querySelector(".prod-info").textContent =
+          singleProduct.description;
+
+        // Update main image (optional)
+        if (singleProduct.image) {
+          document.querySelector(".prod-img-main").src = singleProduct.image;
+          document.querySelector(".prod-img-main").alt = singleProduct.name;
+        }
+      }
+    });
+  </script>
 </html>
