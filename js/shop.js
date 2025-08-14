@@ -110,8 +110,8 @@ function renderProducts() {
     if (product?.discount) {
       discountHtml = `
         <div class="price">
-            <span>₹${product.price}</span>
-            <del>₹${
+            <span>$${product.price}</span>
+            <del>$${
               product.price + (product.price * product.discount) / 100
             }</del>
             <div class="discount"><span>-${product.discount}%</span></div>
@@ -222,44 +222,32 @@ document.addEventListener("DOMContentLoaded", function () {
   setupSizeSelection(".filter-overlay .sizes");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Double-thumb slider logic
-  const minInput = document.getElementById("min-price");
-  const maxInput = document.getElementById("max-price");
-  const slider = document.querySelector(".price-slider");
+const slider1 = document.getElementById("slider-1");
+const slider2 = document.getElementById("slider-2");
+const range1 = document.getElementById("range1");
+const range2 = document.getElementById("range2");
+const track = document.querySelector(".slider-track");
 
-  // Create selected range bar
-  let selectedRange = slider.querySelector(".selected-range");
-  if (!selectedRange) {
-    selectedRange = document.createElement("div");
-    selectedRange.className = "selected-range";
-    slider.appendChild(selectedRange);
+function updateSlider() {
+  let minValue = parseInt(slider1.value);
+  let maxValue = parseInt(slider2.value);
+
+  if (minValue > maxValue) {
+    [minValue, maxValue] = [maxValue, minValue];
   }
 
-  function updateRangeBar() {
-    const min = parseInt(minInput.min);
-    const max = parseInt(maxInput.max);
-    const minVal = parseInt(minInput.value);
-    const maxVal = parseInt(maxInput.value);
+  range1.textContent = `$${minValue}`;
+  range2.textContent = `$${maxValue}`;
 
-    // Prevent overlap
-    if (minVal > maxVal) {
-      minInput.value = maxVal;
-    }
-    if (maxVal < minVal) {
-      maxInput.value = minVal;
-    }
+  let percent1 = (minValue / slider1.max) * 100;
+  let percent2 = (maxValue / slider2.max) * 100;
 
-    // Calculate positions
-    const percentMin = ((minInput.value - min) / (max - min)) * 100;
-    const percentMax = ((maxInput.value - min) / (max - min)) * 100;
+  track.style.left = percent1 + "%";
+  track.style.width = percent2 - percent1 + "%";
+}
 
-    selectedRange.style.left = percentMin + "%";
-    selectedRange.style.width = percentMax - percentMin + "%";
-  }
+slider1.addEventListener("input", updateSlider);
+slider2.addEventListener("input", updateSlider);
 
-  minInput.addEventListener("input", updateRangeBar);
-  maxInput.addEventListener("input", updateRangeBar);
+updateSlider();
 
-  updateRangeBar();
-});

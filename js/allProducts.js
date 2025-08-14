@@ -153,7 +153,13 @@ function searchProducts(query) {
     const name = (product.name || "").toLowerCase();
     const sku = (product.sku || "").toLowerCase();
     const desc = (product.description || "").toLowerCase();
-    return name.includes(q) || sku.includes(q) || desc.includes(q);
+    const pric = (product.price || "").toString().toLowerCase();
+    return (
+      name.includes(q) ||
+      sku.includes(q) ||
+      desc.includes(q) ||
+      pric.includes(q)
+    );
   });
 
   if (filteredProducts.length === 0) {
@@ -234,6 +240,8 @@ function saveProduct() {
     requiresShipping,
     image: uploadedImageEl && uploadedImageEl.src ? uploadedImageEl.src : null,
     createdAt: new Date().toISOString(),
+    rating: 5,
+    discount: 15,
   };
 
   products.unshift(product);
@@ -430,3 +438,7 @@ window.addEventListener("resize", function () {
     sidebar.classList.remove("open");
   }
 });
+
+function goBack() {
+  window.location.href = "shop.html";
+}

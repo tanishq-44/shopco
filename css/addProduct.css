@@ -177,6 +177,32 @@ body {
   transition: all 0.2s ease;
 }
 
+.btn-back {
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .header-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.btn-back:hover {
+  background: #5a6268;
+}
+
 .btn-secondary {
   background: #95a5a6;
   color: white;

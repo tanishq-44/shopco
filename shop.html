@@ -132,25 +132,26 @@
                   class="down-icon"
                 />
               </div>
-              <div class="slider price-slider">
+              <div class="range-slider">
+                <div class="slider-track"></div>
                 <input
                   type="range"
-                  min="50"
-                  max="200"
+                  min="0"
+                  max="500"
                   value="50"
-                  id="price-min"
+                  id="slider-1"
                 />
                 <input
                   type="range"
-                  min="50"
-                  max="200"
+                  min="0"
+                  max="500"
                   value="200"
-                  id="price-max"
+                  id="slider-2"
                 />
-                <div class="price-labels">
-                  <span>$50</span>
-                  <span>$200</span>
-                </div>
+              </div>
+              <div class="price-values">
+                <span id="range1">$50</span>
+                <span id="range2">$200</span>
               </div>
             </div>
             <div class="line filter-line"></div>

@@ -40,6 +40,10 @@
             <h1 class="main-title">Add New Product</h1>
           </div>
           <div class="header-actions">
+            <button class="btn-back" onclick="goBack()">
+              <span>←</span>
+              <span>Back</span>
+            </button>
             <button class="btn-primary">Add New Product</button>
           </div>
         </header>
@@ -413,6 +417,10 @@
           };
           reader.readAsDataURL(file);
         }
+      }
+
+      function goBack() {
+        window.location.href = "shop.html"; // Adjust the URL as needed
       }
 
       // Close sidebar when clicking outside on mobile
