@@ -19,7 +19,8 @@
             <div class="nav-section-title catalog-active">Catalog</div>
             <ul class="nav-list">
               <li class="nav-item">
-                <a href="allProducts.html" class="nav-link"> Products </a>
+                <a href="" class="nav-link active" > Add Product </a>
+                <a href="allProducts.html" class="nav-link" id="productsLink"> Products </a>
               </li>
             </ul>
             <input
@@ -48,13 +49,13 @@
           </div>
         </header>
 
-        <nav class="tab-nav">
+        <!-- <nav class="tab-nav">
           <ul class="tab-list">
             <li class="tab-item">
               <a href="#" class="tab-link active">General</a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
 
         <div class="product-form-container">
           <div class="product-form">
@@ -102,9 +103,11 @@
                       <label for="qty" class="form-label">Qty</label>
                       <input
                         type="number"
+                        pattern="[0-9]*"
                         id="qty"
                         class="form-input"
                         value="1"
+                        onkeypress="restrictToNumbers(event)"
                       />
                       <div class="checkbox-group" style="margin-top: 0.5rem">
                         <input type="checkbox" id="shipping" checked />
@@ -367,12 +370,14 @@
               <div class="price-section">
                 <div class="price-label">Price</div>
                 <div class="price-input-group">
-                  <span class="price-symbol">$</span>
+                  <span class="price-symbol">₹</span>
                   <input
                     type="number"
+                    pattern="[0-9]*"
                     class="price-input"
                     value="20.00"
                     step="0.01"
+                    onkeypress="restrictToNumbers(event)"
                   />
                 </div>
               </div>
@@ -420,7 +425,7 @@
       }
 
       function goBack() {
-        window.location.href = "shop.html"; // Adjust the URL as needed
+        window.location.href = "allProducts.html"; // Adjust the URL as needed
       }
 
       // Close sidebar when clicking outside on mobile

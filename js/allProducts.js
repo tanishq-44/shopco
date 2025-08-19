@@ -442,3 +442,15 @@ window.addEventListener("resize", function () {
 function goBack() {
   window.location.href = "shop.html";
 }
+
+function restrictToNumbers(event) {
+  const charCode = event.which ? event.which : event.keyCode;
+  // Allow numbers (0-9), backspace, delete, tab, enter, and arrow keys
+  if (
+    charCode > 31 &&
+    (charCode < 48 || charCode > 57) &&
+    ![8, 9, 13, 37, 39, 46].includes(charCode)
+  ) {
+    event.preventDefault(); // Prevent the character from being entered
+  }
+}

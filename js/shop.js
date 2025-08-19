@@ -222,11 +222,40 @@ document.addEventListener("DOMContentLoaded", function () {
   setupSizeSelection(".filter-overlay .sizes");
 });
 
+// const slider1 = document.getElementById("slider-1");
+// const slider2 = document.getElementById("slider-2");
+// const range1 = document.getElementById("range1");
+// const range2 = document.getElementById("range2");
+// const track = document.querySelector(".slider-track");
+
+// function updateSlider() {
+//   let minValue = parseInt(slider1.value);
+//   let maxValue = parseInt(slider2.value);
+
+//   if (minValue > maxValue) {
+//     [minValue, maxValue] = [maxValue, minValue];
+//   }
+
+//   range1.textContent = `$${minValue}`;
+//   range2.textContent = `$${maxValue}`;
+
+//   let percent1 = (minValue / slider1.max) * 100;
+//   let percent2 = (maxValue / slider2.max) * 100;
+
+//   track.style.left = percent1 + "%";
+//   track.style.width = percent2 - percent1 + "%";
+// }
+
+// slider1.addEventListener("input", updateSlider);
+// slider2.addEventListener("input", updateSlider);
+
+// updateSlider();
+
 const slider1 = document.getElementById("slider-1");
 const slider2 = document.getElementById("slider-2");
-const range1 = document.getElementById("range1");
-const range2 = document.getElementById("range2");
 const track = document.querySelector(".slider-track");
+const thumbPrice1 = document.getElementById("thumb-price-1");
+const thumbPrice2 = document.getElementById("thumb-price-2");
 
 function updateSlider() {
   let minValue = parseInt(slider1.value);
@@ -236,18 +265,26 @@ function updateSlider() {
     [minValue, maxValue] = [maxValue, minValue];
   }
 
-  range1.textContent = `$${minValue}`;
-  range2.textContent = `$${maxValue}`;
+  thumbPrice1.textContent = `₹${minValue}`;
+  thumbPrice2.textContent = `₹${maxValue}`;
 
-  let percent1 = (minValue / slider1.max) * 100;
-  let percent2 = (maxValue / slider2.max) * 100;
+  // Calculate percent positions
+  const min = parseInt(slider1.min);
+  const max = parseInt(slider1.max);
 
+  const percent1 = ((minValue - min) / (max - min)) * 100;
+  const percent2 = ((maxValue - min) / (max - min)) * 100;
+
+  // Position price labels under thumbs
+  thumbPrice1.style.left = `calc(${percent1}% )`;
+  thumbPrice2.style.left = `calc(${percent2}% )`;
+
+  // Position and width of the selected range bar
   track.style.left = percent1 + "%";
-  track.style.width = percent2 - percent1 + "%";
+  track.style.width = (percent2 - percent1) + "%";
 }
 
 slider1.addEventListener("input", updateSlider);
 slider2.addEventListener("input", updateSlider);
 
 updateSlider();
-

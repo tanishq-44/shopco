@@ -13,6 +13,7 @@
 }
 .filters {
   min-width: 295px;
+  max-width: 295px;
   height: 1220px;
   background: #fff;
   border-radius: 20px;
@@ -37,6 +38,10 @@
 }
 .down-icon {
   transform: rotate(90deg);
+  cursor: pointer;
+}
+.down-icon.open {
+  transform: rotate(0deg);
 }
 .filter-line {
   margin-bottom: 24px;
@@ -51,27 +56,7 @@
   font-weight: 500;
   margin-bottom: 10px;
   cursor: pointer;
-}
-.slider {
-  margin-bottom: 8px;
-}
-.slider input[type="range"] {
-  width: 100%;
-  margin: 0 0 8px 0;
-}
-.slider input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #f0f0f0; /* Color of the track */
-}
-
-.slider input[type="range"]::-webkit-slider-thumb {
-  background-color: red; /* Color of the thumb */
-}
-.price-labels {
-  display: flex;
-  justify-content: space-around;
-  font-size: 14px;
-  color: #000;
-  font-weight: 500;
+  color: #666666;
 }
 .colors {
   display: flex;
@@ -156,6 +141,18 @@
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 1.6rem;
+  width: 295px;
+  height: 298px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0eeed;
+}
+
+.shop-card-img img {
+  width: 80%;
+  height: 85%;
+  object-fit: cover;
 }
 
 .shop-name {
@@ -423,69 +420,102 @@
 
 /* Double-thumb slider container */
 .range-slider {
-    position: relative;
-    width: 100%;
-  }
+  position: relative;
+  width: 100%;
+  height: 56px;
+  margin-bottom: 8px;
+}
 
-  .range-slider input[type="range"] {
-    -webkit-appearance: none;
-    position: absolute;
-    width: 100%;
-    height: 6px;
-    background: transparent;
-    pointer-events: none;
-  }
+.range-slider input[type="range"] {
+  -webkit-appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  pointer-events: none;
+  top: 24px;
+}
 
-  /* Track (background line) */
-  .range-slider input[type="range"]::-webkit-slider-runnable-track {
-    height: 6px;
-    background: transparent;
-  }
-  .range-slider input[type="range"]::-moz-range-track {
-    height: 6px;
-    background: transparent;
-  }
+/* Track (background line) */
+.range-slider input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+.range-slider input[type="range"]::-moz-range-track {
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
 
-  /* Knobs (thumbs) */
-  .range-slider input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: black;
-    cursor: pointer;
-    pointer-events: auto;
-    position: relative;
-    z-index: 2;
-    transform: translateY(-50%);
-  }
-  .range-slider input[type="range"]::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: black;
-    cursor: pointer;
-    pointer-events: auto;
-    position: relative;
-    z-index: 2;
-    border: none;
-  }
+/* Knobs (thumbs) */
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  top: 5px;
+  z-index: 2;
+  margin-top: -13px;
+}
+.range-slider input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  top: 5px;
+  z-index: 2;
+  border: none;
+}
+.range-slider input[type="range"]:focus {
+  outline: none;
+  border-radius: 20px;
+}
+.range-slider input[type="range"]:focus::-webkit-slider-thumb {
+  background: #222;
+}
+.range-slider input[type="range"]:focus::-moz-range-thumb {
+  background: #222;
+}
 
-  /* Highlighted range line */
-  .slider-track {
-    position: absolute;
-    height: 6px;
-    background: black;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+/* Selected range bar */
+.slider-track {
+  position: absolute;
+  height: 6px;
+  background: #000;
+  z-index: 1;
+  top: 24px;
+  border-radius: 4px;
+}
 
-  /* Price labels */
-  .price-values {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 6px;
-    font-size: 14px;
-  }
+/* Price labels below thumbs */
+.thumb-price {
+  position: absolute;
+  top: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 10;
+}
+#thumb-price-1 {
+  transform: translateX(-40%);
+}
+#thumb-price-2 {
+  transform: translateX(-64%);
+}
+
+.hide{
+  display: none;
+}

@@ -38,7 +38,7 @@
                 alt="menu icon"
                 class="hamburger-menu"
               />
-              <div class="logo-text">SHOP.CO</div>
+              <a href="index.html" class="logo-text">SHOP.CO</a>
             </div>
             <div class="nav-list">
               <button class="nav-list-close" aria-label="Close menu">
@@ -70,11 +70,13 @@
                 alt="cart icon"
                 class="nav-icon"
               />
-              <img
-                src="./assets/icons/user.svg"
-                alt="user profile icon"
-                class="nav-icon"
-              />
+              <a href="allProducts.html">
+                <img
+                  src="./assets/icons/user.svg"
+                  alt="user profile icon"
+                  class="nav-icon"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -129,10 +131,10 @@
                 <img
                   src="./assets/icons/rightArr.svg"
                   alt="filter icon"
-                  class="down-icon"
+                  class="down-icon filter-dropdown"
                 />
               </div>
-              <div class="range-slider">
+              <div class="range-slider filter-content">
                 <div class="slider-track"></div>
                 <input
                   type="range"
@@ -148,10 +150,8 @@
                   value="200"
                   id="slider-2"
                 />
-              </div>
-              <div class="price-values">
-                <span id="range1">$50</span>
-                <span id="range2">$200</span>
+                <span class="thumb-price" id="thumb-price-1">₹50</span>
+                <span class="thumb-price" id="thumb-price-2">₹200</span>
               </div>
             </div>
             <div class="line filter-line"></div>
@@ -164,7 +164,7 @@
                   class="down-icon"
                 />
               </div>
-              <div class="colors">
+              <div class="colors filter-content">
                 <span class="color" style="background: #00c12b"></span>
                 <span class="color" style="background: #f50606"></span>
                 <span class="color" style="background: #f5dd06"></span>
@@ -187,7 +187,7 @@
                   class="down-icon"
                 />
               </div>
-              <div class="sizes">
+              <div class="sizes filter-content">
                 <span class="size">XX-Small</span>
                 <span class="size">X-Small</span>
                 <span class="size">Small</span>
@@ -209,25 +209,27 @@
                   class="down-icon"
                 />
               </div>
-              <div class="filter-title">
-                T-shirts
-                <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
-              </div>
-              <div class="filter-title">
-                Shorts
-                <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
-              </div>
-              <div class="filter-title">
-                Shirts
-                <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
-              </div>
-              <div class="filter-title">
-                Hoodie
-                <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
-              </div>
-              <div class="filter-title">
-                Jeans
-                <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+              <div class="filter-content">
+                <div class="filter-title">
+                  T-shirts
+                  <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+                </div>
+                <div class="filter-title">
+                  Shorts
+                  <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+                </div>
+                <div class="filter-title">
+                  Shirts
+                  <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+                </div>
+                <div class="filter-title">
+                  Hoodie
+                  <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+                </div>
+                <div class="filter-title">
+                  Jeans
+                  <img src="./assets/icons/rightArr.svg" alt="right-arrow" />
+                </div>
               </div>
             </div>
           </aside>
